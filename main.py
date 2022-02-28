@@ -267,7 +267,7 @@ def makeguide(skill_name,boost_list):
 async def on_ready():
     print(f'Logged in !')
     
-@bot.command(name="ping" ,description="show bot's ping" ,scope=839662151010353172)
+@bot.command(name="ping" ,description="show bot's ping" ) #,scope=839662151010353172
 async def ping(ctx:it.CommandContext):
     await ctx.send(f"Pong! {round(bot.latency)}ms")
 
@@ -276,7 +276,6 @@ async def ping(ctx:it.CommandContext):
 @bot.command(
             name="calc",
             description="Calculate Resources",
-            scope=839662151010353172,
             options=[
                     it.Option(
                             name="current_lv",
@@ -423,7 +422,7 @@ async def boost_response(ctx:it.ComponentContext,blah):
 
 
 
-@bot.command(name="invite" ,description="get bot's invite link" ,scope=839662151010353172)
+@bot.command(name="invite" ,description="get bot's invite link" )
 async def invite(ctx:it.CommandContext):
     e = it.Embed(title="Click The Button To Invite Me", color=0x00ff00)
     inv_button_on = Button(
@@ -437,7 +436,7 @@ async def invite(ctx:it.CommandContext):
     time.sleep(10)
     await ctx.edit("Invite Link Timed'Out",embeds=[],components=[])
 
-@bot.command(name="help" ,description="show list of commands" ,scope=839662151010353172)
+@bot.command(name="help" ,description="show list of commands")
 async def help(ctx:it.CommandContext):
 
     h_embed = it.Embed( title="Help",
@@ -457,7 +456,7 @@ async def help(ctx:it.CommandContext):
     await ctx.send(embeds=[h_embed])
 
 
-@bot.command(name="servers" ,description="show the servers connected to" ,scope=839662151010353172)
+@bot.command(name="servers" ,description="show the servers connected to" ,scope=[839662151010353172,869611702042378250])
 async def servers(ctx:it.CommandContext):
     tech_id = 465858376182530059
     if int(ctx.author.user.id) == tech_id :
@@ -473,7 +472,7 @@ async def servers(ctx:it.CommandContext):
     else :
         await ctx.send("You don't have permissions to check this")
 
-@bot.command(name="guide" ,description="make a guide for a specific skill with specific boost" ,scope=839662151010353172)
+@bot.command(name="guide" ,description="make a guide for a specific skill with specific boost" )
 async def guide(ctx:it.CommandContext):
     await ctx.send("Select Skill To Make Guide For !", components=[g_skills_menu])
 
@@ -500,10 +499,6 @@ async def boost_response(ctx:it.ComponentContext,blah):
     await ctx.edit("Good Luck With The Grind, Skiller !!", embeds = g_embed)
     time.sleep(5)
     await ctx.edit("Good Luck With The Grind, Skiller !!", embeds = g_embed, components=[])
-
-
-
-
 
 
 
