@@ -472,6 +472,14 @@ async def servers(ctx:it.CommandContext):
     else :
         await ctx.send("You don't have permissions to check this")
 
+
+@bot.command(name="test" ,description="test command" ,scope=[839662151010353172,869611702042378250])
+async def test(ctx:it.CommandContext):
+    emoji = "<:combat_sw:880221520121700362>"
+    msg = emoji + " : combat emoji"
+    await ctx.send(msg)
+
+
 @bot.command(name="guide" ,description="make a guide for a specific skill with specific boost" )
 async def guide(ctx:it.CommandContext):
     await ctx.send("Select Skill To Make Guide For !", components=[g_skills_menu])
