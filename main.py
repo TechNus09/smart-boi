@@ -389,7 +389,7 @@ async def boost_response(ctx:it.ComponentContext,blah):
             rsc_used = calc_reg[ctx.author.user.username][1]
             rsc_xp = resources[rsc_used]
             resource_emoji = rsc_emojis[rsc_used][1]
-            chosen_skill = skills[int(choice)]
+            chosen_skill = skills[int(choice)].capitalize()
             skill_emoji = skills_emoji[chosen_skill]
 
             rsc_needed = math.ceil(xp_needed / rsc_xp) + 1
