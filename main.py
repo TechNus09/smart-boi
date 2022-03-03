@@ -398,6 +398,9 @@ async def boost_response(ctx:it.ComponentContext,blah):
             if chosen_skill == "Fishing" : #fishing
                 bait_emoji = baits_emojis[rsc_used]
                 result = f'Skill : {skill_emoji} ' + chosen_skill.capitalize() + f'\nFish : ' + resource_emoji + ' ' + rsc_used + f'\nBait : ' + bait_emoji + " "  + baits[rsc_used] + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed {resource_emoji} : ' + f'{rsc_needed_boosted:,}'
+
+                await ctx.edit(result, components=[])
+
             elif chosen_skill.lower() == "tailoring" :
                 if rsc_used in tlr_ess:
                     book_emoji = rsc_emojis['Book'][1]
@@ -407,34 +410,42 @@ async def boost_response(ctx:it.ComponentContext,blah):
                     rlc_used = tlr_ess[rsc_used][1]             
                     rlc_emoji = rsc_emojis[rlc_used][1]
                     result = f'Skill : {skill_emoji} ' + 'Tailoring ' + f'\nResource : ' + resource_emoji + ' ' + rsc_used + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed : ' + book_emoji + '||'+ rlc_emoji + f' {rsc_needed_boosted:,}'+ f'\nEssences Needed : ' + ess_emoji + f' {ess_needed:,}'
+
+                    await ctx.edit(result, components=[])
+
                 elif rsc_used == 'Wand' :
                         ess_emoji = rsc_emojis['Magic Essence'][1]
                         ess_needed = rsc_needed_boosted * 15
                         logs_needed = rsc_needed_boosted * 2
                         log_emoji = '<:oak_log_ca1:922856175345754163>'
                         result = f'Skill : {skill_emoji} ' + 'Tailoring ' + f'\nResource : ' + resource_emoji + ' ' + rsc_used + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed : {resource_emoji} ' + f'{rsc_needed_boosted:,}' + f'\nMagic Essences Needed : {ess_emoji} ' + f'{ess_needed:,}' + f'\nLogs Needed : ' + log_emoji  + f' {logs_needed:,}'
+
+                        await ctx.edit(result, components=[])
+
                 else :
                     result = f'Skill : {skill_emoji} ' + chosen_skill.capitalize() + f'\nResource : ' + resource_emoji + ' ' + rsc_used + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed : {resource_emoji} ' + f'{rsc_needed_boosted:,}'
 
-            await ctx.edit(result, components=[])
+                    await ctx.edit(result, components=[])
 
+            
     calc_reg.pop(str(ctx.author.user.username))
 
 
 
 @bot.command(name="invite" ,description="get bot's invite link" )
 async def invite(ctx:it.CommandContext):
-    e = it.Embed(title="Click The Button To Invite Me", color=0x00ff00)
-    inv_button_on = Button(
-                            style=ButtonStyle.LINK, 
-                            label="Invite Me !", 
-                            url=invite_url,
-                            disabled=False
-                            )
-
-    await ctx.send(embeds=[e],components=[inv_button_on])
-    time.sleep(10)
-    await ctx.edit("Invite Link Timed'Out",embeds=[],components=[])
+    await ctx.send("Sorry, currently the bot is in 100 servers and waiting for verification to be able to join more :(.")
+#    e = it.Embed(title="Click The Button To Invite Me", color=0x00ff00)
+#    inv_button_on = Button(
+#                            style=ButtonStyle.LINK, 
+#                            label="Invite Me !", 
+#                            url=invite_url,
+#                            disabled=False
+#                            )
+#
+#    await ctx.send(embeds=[e],components=[inv_button_on])
+#    time.sleep(10)
+#    await ctx.edit("Invite Link Timed'Out",embeds=[],components=[])
 
 @bot.command(name="help" ,description="show list of commands")
 async def help(ctx:it.CommandContext):
@@ -473,11 +484,11 @@ async def servers(ctx:it.CommandContext):
         await ctx.send("You don't have permissions to check this")
 
 
-@bot.command(name="test" ,description="test command" ,scope=[839662151010353172,869611702042378250])
-async def test(ctx:it.CommandContext):
-    emoji = "<:combat_sw:880221520121700362>"
-    msg = emoji + " : combat emoji"
-    await ctx.send(msg)
+#@bot.command(name="test" ,description="test command" ,scope=[839662151010353172,869611702042378250])
+#async def test(ctx:it.CommandContext):
+#    emoji = "<:combat_sw:880221520121700362>"
+#    msg = emoji + " : combat emoji"
+#    await ctx.send(msg)
 
 
 @bot.command(name="guide" ,description="make a guide for a specific skill with specific boost" )
