@@ -272,7 +272,11 @@ async def calc(ctx:it.CommandContext,current_lv,target_lv,current_perc="0",targe
     lvl_reg["tarlv"]=int(target_lv)
     lvl_reg["curperc"]=float(current_perc)
     lvl_reg["tarperc"]=float(target_perc)
-    await ctx.send("Select Skill !", components=[skills_menu])
+    row = ActionRow(
+    components=[skills_menu]
+    )
+
+    await ctx.send("Select Skill !", components=row)
 
 @bot.component("select_skill")
 async def skills_response(ctx:it.ComponentContext,blah):
@@ -283,13 +287,19 @@ async def skills_response(ctx:it.ComponentContext,blah):
     elif skill_id == '0': #combat
         calc_reg[str(ctx.author.user.username)]=[skill_id]
         loc_menu = MakeMenu3("Select Location !","select_location")
+        row = ActionRow(
+        components=[loc_menu]
+        )
     
-        await ctx.edit("Select Location !",components=[loc_menu])
+        await ctx.edit("Select Location !",components=row)
 
     else:#other skills
         calc_reg[str(ctx.author.user.username)]=[skill_id]
         rsc_menu = MakeMenu(skill_id,"Select Resource !","select_resource")
-        await ctx.edit("Select Resource !",components=[rsc_menu])
+        row = ActionRow(
+        components=[rsc_menu]
+        )
+        await ctx.edit("Select Resource !",components=row)
 
 @bot.component("select_location")
 async def loc_response(ctx:it.ComponentContext,blah):
@@ -298,7 +308,10 @@ async def loc_response(ctx:it.ComponentContext,blah):
         await ctx.edit("You Chose To End The Interaction", components=[])
     else:
         mob_menu = MakeMenu4(int(loc_id),"Select Mob !","select_mob")
-        await ctx.edit("Select Mob !", components=[mob_menu])
+        row = ActionRow(
+        components=[mob_menu]
+        )
+        await ctx.edit("Select Mob !", components=row)
 
 @bot.component("select_mob")
 async def mob_response(ctx:it.ComponentContext,blah):
@@ -308,8 +321,11 @@ async def mob_response(ctx:it.ComponentContext,blah):
     else:
         boost_menu = MakeMenu2("0","Select Boost !","select_boost")
         calc_reg[str(ctx.author.user.username)].append(mob_id)
+        row = ActionRow(
+        components=[boost_menu]
+        )
         
-        await ctx.edit("Select Boost !",components=[boost_menu])
+        await ctx.edit("Select Boost !",components=row)
 
 @bot.component("select_resource")
 async def rsc_response(ctx:it.ComponentContext,blah):
@@ -321,8 +337,11 @@ async def rsc_response(ctx:it.ComponentContext,blah):
         
         boost_menu = MakeMenu2(skill_id,"Select Boost !","select_boost")
         calc_reg[str(ctx.author.user.username)].append(resource_id)
+        row = ActionRow(
+        components=[boost_menu]
+        )
         
-        await ctx.edit("Select Boost !",components=[boost_menu])
+        await ctx.edit("Select Boost !",components=row)
 
 @bot.component("select_boost")
 async def boost_response(ctx:it.ComponentContext,blah):
