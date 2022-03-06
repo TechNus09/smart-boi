@@ -62,7 +62,7 @@ skills_menu = it.SelectMenu(
 	            it.SelectOption(label=f'Cancel',value='Cancel',emoji=it.Emoji(id=cancel_id,animated=False)._json)
 	                ],
 	            placeholder="Select Skill !",
-	            custom_id="select_skill",
+	            custom_id="select_skill"
 	                        )
 g_skills_menu = it.SelectMenu(
             options= [
@@ -76,7 +76,7 @@ g_skills_menu = it.SelectMenu(
 	            it.SelectOption(label=f'Cancel',value='Cancel',emoji=it.Emoji(id=cancel_id,animated=False)._json)
 	                ],
 	            placeholder="Select Skill !",
-	            custom_id="g_select_skill",
+	            custom_id="g_select_skill"
 	                        )
 
 
@@ -100,7 +100,7 @@ def MakeMenu(skill_id,PH,C_ID):
     menu = it.SelectMenu(
                     options=temp_list,
                     placeholder=PH,
-                    custom_id=C_ID,
+                    custom_id=C_ID
                         )
     return menu
 
@@ -130,7 +130,7 @@ def MakeMenu2(skill_id,PH,C_ID):
                         placeholder=PH,
                         custom_id=C_ID,
                         min_values=1,
-                        max_values=4,
+                        max_values=4
                             )
     elif skill_id == '1':
         menu = it.SelectMenu(
@@ -138,50 +138,14 @@ def MakeMenu2(skill_id,PH,C_ID):
                         placeholder=PH,
                         custom_id=C_ID,
                         min_values=1,
-                        max_values=3,
+                        max_values=3
                             )
     else:
         menu = it.SelectMenu(
                         options=temp_list,
                         placeholder=PH,
-                        custom_id=C_ID,
+                        custom_id=C_ID
                             )
-    return menu
-
-def MakeMenu2Off(skill_id,PH,C_ID,selected):
-    boosts_list = boosts[int(skill_id)]
-    temp_list = []
-    for i in boosts_list:
-        if i[0] in selected:
-            temp_list.append(it.SelectOption(
-                                            label=i[0],
-                                            value=i[0],
-                                            emoji=it.Emoji(id=i[1],animated=False)._json
-                                            )
-                            )
-        else:
-            temp_list.append(it.SelectOption(
-                                            label=i[0],
-                                            value=i[0],
-                                            emoji=it.Emoji(id=i[1],animated=False)._json,
-                                            default=True
-                                            )
-                            )    
-    
-    temp_list.append(it.SelectOption(
-                                    label="Cancel",
-                                    value="Cancel",
-                                    emoji=it.Emoji(id=cancel_id,animated=False)._json
-                                    )
-                    )
-    menu = it.SelectMenu(
-                    options=temp_list,
-                    custom_id=C_ID,
-                    min_values=1,
-                    max_values=4,
-                    disabled=True,
-                    
-                        )
     return menu
 
 def MakeMenu3(PH,C_ID):
@@ -203,7 +167,7 @@ def MakeMenu3(PH,C_ID):
     menu = it.SelectMenu(
                     options=temp_list,
                     placeholder=PH,
-                    custom_id=C_ID,
+                    custom_id=C_ID
                         )
     return menu
 
@@ -226,7 +190,7 @@ def MakeMenu4(loc_id,PH,C_ID):
     menu = it.SelectMenu(
                     options=temp_list,
                     placeholder=PH,
-                    custom_id=C_ID,
+                    custom_id=C_ID
                         )
     return menu
 
@@ -395,12 +359,12 @@ async def boost_response(ctx:it.ComponentContext,blah):
             rsc_needed = math.ceil(xp_needed / rsc_xp) + 1
             rsc_needed_boosted = math.ceil(rsc_needed / bst_used)
 
-            if chosen_skill == "Fishing" : #fishing
+            if chosen_skill.lower() == "fishing" : #fishing
                 bait_emoji = baits_emojis[rsc_used]
                 result = f'Skill : {skill_emoji} ' + chosen_skill.capitalize() + f'\nFish : ' + resource_emoji + ' ' + rsc_used + f'\nBait : ' + bait_emoji + " "  + baits[rsc_used] + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed {resource_emoji} : ' + f'{rsc_needed_boosted:,}'
 
                 await ctx.edit(result, components=[])
-
+            
             elif chosen_skill.lower() == "tailoring" :
                 if rsc_used in tlr_ess:
                     book_emoji = rsc_emojis['Book'][1]
@@ -426,9 +390,13 @@ async def boost_response(ctx:it.ComponentContext,blah):
                     result = f'Skill : {skill_emoji} ' + chosen_skill.capitalize() + f'\nResource : ' + resource_emoji + ' ' + rsc_used + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed : {resource_emoji} ' + f'{rsc_needed_boosted:,}'
 
                     await ctx.edit(result, components=[])
+            else :
+                result = f'Skill : {skill_emoji} ' + chosen_skill.capitalize() + f'\nResource : ' + resource_emoji + ' ' + rsc_used + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed : {resource_emoji} ' + f'{rsc_needed_boosted:,}'
+
+                await ctx.edit(result, components=[])
 
             
-    calc_reg.pop(str(ctx.author.user.username))
+    #calc_reg.pop(str(ctx.author.user.username))
 
 
 
