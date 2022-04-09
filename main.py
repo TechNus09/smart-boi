@@ -236,6 +236,10 @@ async def ping(ctx:it.CommandContext):
     await ctx.send(f"Pong! {round(bot.latency)}ms")
 
 
+	
+    
+
+
 
 @bot.command(
             name="calc",
