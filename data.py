@@ -179,13 +179,13 @@ boosts = [Combat_boosts,Mining_boosts,Smithing_boosts,Woodcutting_boosts,Craftin
 
 
 skills_dict = [
-                ['Combat',880221520121700362],
-                ['Mining',880221690049732638],
-                ['Smithing',880221615374360648],
-                ['Woodcutting',880221633913163796],
-                ['Crafting',880221589050916914],
-                ['Fishing',880221548399697923],
-                ['Cooking',880221572751847444],
+                ['Combat',962217488479834142],
+                ['Mining',962217952927698954],
+                ['Smithing',945264297167175681],
+                ['Woodcutting',962217565780865024],
+                ['Crafting',922871203130134528],
+                ['Fishing',962217539767771217],
+                ['Cooking',962217512035053599],
                 ['Tailoring',937013045488648252],
                 ['Sailing',937013045404786758]
                 ]
@@ -287,13 +287,13 @@ mobs_emoji = {
     }
 
 skills_emoji = {
-                'Combat':'<:combat_sw:880221520121700362>',
-                'Mining':'<:mining_sw:880221690049732638>',
-                'Smithing':'<:smithing_sw:880221615374360648>',
-                'Woodcutting':'<:woodcutting_sw:880221633913163796>',
-                'Crafting':'<:crafting_sw:880221589050916914>',
-                'Fishing':'<:fishing_sw:880221548399697923>',
-                'Cooking':'<:cooking_sw:880221572751847444>',
+                'Combat':'<:combat_ca1:962217488479834142>',
+                'Mining':'<:mining_ca1:962217952927698954>',
+                'Smithing':'<:infhammer_ca3:945264297167175681>',
+                'Woodcutting':'<:woodcutting_ca1:962217565780865024>',
+                'Crafting':'<:experience_relic_ca1:922871203130134528>',
+                'Fishing':'<:fishing_ca1:962217539767771217>',
+                'Cooking':'<:cooking_ca1:962217512035053599>',
                 'Tailoring':'<:tailoring_ca3:937013045488648252>',
                 'Sailing':'<:sailing_ca3:937013045404786758>'
                 }
