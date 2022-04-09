@@ -413,6 +413,10 @@ async def boost_response(ctx:it.ComponentContext,blah):
                 result = f'Skill : {skill_emoji} ' + chosen_skill.capitalize() + f'\nResource : ' + resource_emoji + ' ' + rsc_used + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed : {resource_emoji} ' + f'{rsc_needed_boosted:,}'
 
                 await ctx.edit(result, components=[])
+		counter = retrieve()
+		counter = counter + 1
+		print(counter)
+		update(counter)
 
             
     #calc_reg.pop(str(ctx.author.user.username))
