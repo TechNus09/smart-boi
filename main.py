@@ -51,13 +51,13 @@ def boost_str_emoji(l):
 #######################Components################################ 
 skills_menu = it.SelectMenu(
             options= [
-	            it.SelectOption(label=f'Combat',value='0', emoji=it.Emoji(id=880221520121700362,animated=False)._json),
-	            it.SelectOption(label=f'Mining',value='1', emoji=it.Emoji(id=880221690049732638,animated=False)._json),
-	            it.SelectOption(label=f'Smithing',value='2', emoji=it.Emoji(id=880221615374360648,animated=False)._json),
-	            it.SelectOption(label=f'Woodcutting',value='3', emoji=it.Emoji(id=880221633913163796,animated=False)._json),
-	            it.SelectOption(label=f'Crafting',value='4', emoji=it.Emoji(id=880221589050916914,animated=False)._json),
-	            it.SelectOption(label=f'Fishing',value='5', emoji=it.Emoji(id=880221548399697923,animated=False)._json),
-	            it.SelectOption(label=f'Cooking',value='6', emoji=it.Emoji(id=880221572751847444,animated=False)._json),
+	            it.SelectOption(label=f'Combat (Melee/Magic)',value='0', emoji=it.Emoji(id=962217488479834142 ,animated=False)._json),
+	            it.SelectOption(label=f'Mining',value='1', emoji=it.Emoji(id=962217952927698954,animated=False)._json),
+	            it.SelectOption(label=f'Smithing',value='2', emoji=it.Emoji(id=945264297167175681,animated=False)._json),
+	            it.SelectOption(label=f'Woodcutting',value='3', emoji=it.Emoji(id=962217565780865024,animated=False)._json),
+	            it.SelectOption(label=f'Crafting',value='4', emoji=it.Emoji(id=922871203130134528,animated=False)._json),
+	            it.SelectOption(label=f'Fishing',value='5', emoji=it.Emoji(id=962217539767771217,animated=False)._json),
+	            it.SelectOption(label=f'Cooking',value='6', emoji=it.Emoji(id=962217512035053599,animated=False)._json),
 	            it.SelectOption(label=f'Tailoring',value='7', emoji=it.Emoji(id=937013045488648252,animated=False)._json),
 	            it.SelectOption(label=f'Cancel',value='Cancel',emoji=it.Emoji(id=cancel_id,animated=False)._json)
 	                ],
@@ -66,12 +66,12 @@ skills_menu = it.SelectMenu(
 	                        )
 g_skills_menu = it.SelectMenu(
             options= [
-	            it.SelectOption(label=f'Mining',value='1', emoji=it.Emoji(id=880221690049732638,animated=False)._json),
-	            it.SelectOption(label=f'Smithing',value='2', emoji=it.Emoji(id=880221615374360648,animated=False)._json),
-	            it.SelectOption(label=f'Woodcutting',value='3', emoji=it.Emoji(id=880221633913163796,animated=False)._json),
-	            it.SelectOption(label=f'Crafting',value='4', emoji=it.Emoji(id=880221589050916914,animated=False)._json),
-	            it.SelectOption(label=f'Fishing',value='5', emoji=it.Emoji(id=880221548399697923,animated=False)._json),
-	            it.SelectOption(label=f'Cooking',value='6', emoji=it.Emoji(id=880221572751847444,animated=False)._json),
+	            it.SelectOption(label=f'Mining',value='1', emoji=it.Emoji(id=962217952927698954,animated=False)._json),
+	            it.SelectOption(label=f'Smithing',value='2', emoji=it.Emoji(id=945264297167175681,animated=False)._json),
+	            it.SelectOption(label=f'Woodcutting',value='3', emoji=it.Emoji(id=962217565780865024,animated=False)._json),
+	            it.SelectOption(label=f'Crafting',value='4', emoji=it.Emoji(id=922871203130134528,animated=False)._json),
+	            it.SelectOption(label=f'Fishing',value='5', emoji=it.Emoji(id=962217539767771217,animated=False)._json),
+	            it.SelectOption(label=f'Cooking',value='6', emoji=it.Emoji(id=962217512035053599,animated=False)._json),
 	            #it.SelectOption(label=f'Tailoring',value='7', emoji=it.Emoji(id=937013045488648252,animated=False)._json),
 	            it.SelectOption(label=f'Cancel',value='Cancel',emoji=it.Emoji(id=cancel_id,animated=False)._json)
 	                ],
