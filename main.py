@@ -272,10 +272,11 @@ async def ping(ctx:it.CommandContext):
                     ],
             )
 async def calc(ctx:it.CommandContext,current_lv,target_lv,current_perc="0",target_perc="0"):
-    lvl_reg["curlv"]=int(current_lv)
-    lvl_reg["tarlv"]=int(target_lv)
-    lvl_reg["curperc"]=float(current_perc)
-    lvl_reg["tarperc"]=float(target_perc)
+    lvl_reg[str(ctx.author.user.username)]= {}
+    lvl_reg[str(ctx.author.user.username)]["curlv"]=int(current_lv)
+    lvl_reg[str(ctx.author.user.username)]["tarlv"]=int(target_lv)
+    lvl_reg[str(ctx.author.user.username)]["curperc"]=float(current_perc)
+    lvl_reg[str(ctx.author.user.username)]["tarperc"]=float(target_perc)
     row = ActionRow(
     components=[skills_menu]
     )
@@ -353,10 +354,10 @@ async def boost_response(ctx:it.ComponentContext,blah):
     if 'Cancel' in boosts_used:
         await ctx.edit("You Chose To End The Interaction", components=[])
     else:
-        curLv = lvl_reg["curlv"]
-        tarLv = lvl_reg["tarlv"]
-        curPerc = lvl_reg["curperc"]
-        tarPerc = lvl_reg["tarperc"]
+        curLv = lvl_reg[str(ctx.author.user.username)]["curlv"]
+        tarLv = lvl_reg[str(ctx.author.user.username)]["tarlv"]
+        curPerc = lvl_reg[str(ctx.author.user.username)]["curperc"]
+        tarPerc = lvl_reg[str(ctx.author.user.username)]["tarperc"]
         xp_needed = getxp(int(curLv),int(tarLv),float(curPerc),float(tarPerc))
         bst_used = round(getboost(boosts_used),5)
         bst_name = boost_str_emoji(boosts_used)
