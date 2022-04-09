@@ -461,7 +461,7 @@ async def help(ctx:it.CommandContext):
     await ctx.send(embeds=[h_embed])
 
 
-@bot.command(name="servers" ,description="show the servers connected to" ,scope=[839662151010353172,869611702042378250])
+@bot.command(name="servers" ,description="show the servers connected to" ,scope=[922854662141526037,922870521648013372,922870521648013372,922919205429473340,869611702042378250])
 async def servers(ctx:it.CommandContext):
     tech_id = 465858376182530059
     if int(ctx.author.user.id) == tech_id :
