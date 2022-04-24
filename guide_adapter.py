@@ -122,6 +122,7 @@ rsc_names = {
     "cobalt_ore":"Cobalt Ore",
     "varaxium":"Varaxium",
     "black_salt":"Black Salt",
+    "magic_ore":"Magic Ore",
     
     "bronze_bar":"Bronze Bar",
     "iron_bar":"Iron Bar",
@@ -131,15 +132,13 @@ rsc_names = {
     "gold_bar":"Gold Bar",
     "mythan_bar":"Mythan Bar",
     "cobalt_bar":"Cobalt Bar",
-    "varaxite_bar":"Varaxite Bar"
+    "varaxite_bar":"Varaxite Bar",
+    "magic_bar":"Magic Bar"
     }
 
-#def guide():
-#   print("------------------------------------") 
-#   for i in range(len(woodcutting_lvls)):
-#       print(woodcutting_lvls[i]) #field name
-#       print(woodcutting_emoji[i][1] + " " + woodcutting_m_name[i] + " - " + woodcutting_m_noboost[i]) #field value
-#       print("[" + woodcutting_xpNeeded[i] + "]") #field value
-#       print("------------------------------------") 
-#
-#
+
+
+
+
+
+
