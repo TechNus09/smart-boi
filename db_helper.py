@@ -8,6 +8,7 @@ import os
 #db_host = os.environ.get("DB_HOST")
 #db_port = os.environ.get("DB_PORT")
 #db_name = os.environ.get("DB_NAME")
+
 connection = psycopg2.connect(
                                 user="",
                                 password="",

@@ -20,6 +20,7 @@ import logging
 
 
 bot = it.Client(os.getenv("TOKEN"))
+
 #logging.basicConfig(level=logging.DEBUG)
 calc_reg = {}
 g_reg = {}
