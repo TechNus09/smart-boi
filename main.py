@@ -229,7 +229,7 @@ def makeguide(skill_name,boost_list):
 
 @bot.event
 async def on_ready():
-    print(f'Logged in !')
+    print(f'Logged in as {str(bot.me.name)}!')
     
 @bot.command(name="ping" ,description="show bot's ping" ) #,scope=839662151010353172
 async def ping(ctx:it.CommandContext):
@@ -418,10 +418,10 @@ async def boost_response(ctx:it.ComponentContext,blah):
                 result = f'Skill : {skill_emoji} ' + chosen_skill.capitalize() + f'\nResource : ' + resource_emoji + ' ' + rsc_used + '\nLvlUp : (' + f'{curLv}' + ')[' + f'{curPerc}' + '%] --> (' + f'{tarLv}' + ')[' + f'{tarPerc}' + '%]' + '\nBoost : ' + bst_name + f'\nQuantity Needed : {resource_emoji} ' + f'{rsc_needed_boosted:,}'
 
                 await ctx.edit(result, components=[])
-                counter = retrieve()
-                counter = counter + 1
-                print(counter)
-                update(counter)
+                #counter = retrieve()
+                #counter = counter + 1
+                #print(counter)
+                #update(counter)
 
     #calc_reg.pop(str(ctx.author.user.username))
 
@@ -462,7 +462,7 @@ async def help(ctx:it.CommandContext):
     await ctx.send(embeds=[h_embed])
 
 
-@bot.command(name="servers" ,description="show the servers connected to" ,scope=[922854662141526037,922870521648013372,922870521648013372,922919205429473340,869611702042378250])
+@bot.command(name="servers" ,description="show the servers connected to" ,scope=[922854662141526037,922870521648013372,922919205429473340,869611702042378250])
 async def servers(ctx:it.CommandContext):
     tech_id = 465858376182530059
     if int(ctx.author.user.id) == tech_id :
