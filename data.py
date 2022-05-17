@@ -77,7 +77,7 @@ smithingRsc = [
 woodcuttingRsc = [
     ['Pine Log', 922856057909420072], ['Dead Log', 922856079233269780], ['Birch Log', 922856103849623702], ['Applewood', 922856116017299466], ['Willow Log', 922856157587058688],
     ['Oak Log', 922856175345754163], ['Chestnut Log', 922856194002001960], ['Maple Log', 922856235978588161], ['Olive Log', 922856248985145374], ['Palm Wood', 922856261052149761],
-    ['Magic Log', 937002915716005929]
+    ['Magic Log', 954795411913179197]
     ]
 craftingRsc = [
     ['Accuracy Relic', 922857047014395904], ['Guarding Relic', 922857046926327899], ['Healing Relic', 922871203033649222], ['Wealth Relic', 922871202773618768],
@@ -356,7 +356,7 @@ rsc_emojis = {
     'Maple Log': [ 922856235978588161, '<:maple_log_ca1:922856235978588161>'],
     'Olive Log': [ 922856248985145374, '<:olive_log_ca1:922856248985145374>'],
     'Palm Wood': [ 922856261052149761,'<:palm_wood_ca1:922856261052149761>'],
-    'Magic Log': [ 937002915716005929, '<:magic_log_ca3:937002915716005929>'],
+    'Magic Log': [ 954795411913179197, '<:magic_log_ca3:954795411913179197>'],
     'Accuracy Relic': [ 922857047014395904, '<:accuracy_relic_ca1:922857047014395904>'],
     'Guarding Relic': [ 922857046926327899, '<:guarding_relic_ca1:922857046926327899>'],
     'Healing Relic': [ 922871203033649222, '<:healing_relic_ca1:922871203033649222>'],
