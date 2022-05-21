@@ -82,7 +82,7 @@ g_skills_menu = it.SelectMenu(
 
 
 ########make select_menu with 1 choice
-def MakeMenu(skill_id,PH,C_ID):
+def make_rsc_menu(skill_id,PH,C_ID):
     resources_list = skill_rsc[int(skill_id)]
     temp_list = []
     for i in resources_list:
@@ -109,7 +109,7 @@ def MakeMenu(skill_id,PH,C_ID):
 
 ########make select_menu with 1 or mor choices
 
-def MakeMenu2(skill_id,PH,C_ID):
+def make_boost_menu(skill_id,PH,C_ID):
     boosts_list = boosts[int(skill_id)]
     temp_list = []
     for i in boosts_list:
@@ -149,7 +149,7 @@ def MakeMenu2(skill_id,PH,C_ID):
                             )
     return menu
 
-def MakeMenu3(PH,C_ID):
+def make_loc_menu(PH,C_ID):
     locations_list = locations
     temp_list = []
     for i in range(len(locations_list)):
@@ -172,7 +172,7 @@ def MakeMenu3(PH,C_ID):
                         )
     return menu
 
-def MakeMenu4(loc_id,PH,C_ID):
+def make_mob_menu(loc_id,PH,C_ID):
     mobs_list = combatRsc[int(loc_id)]
     temp_list = []
     for i in mobs_list:
@@ -292,7 +292,7 @@ async def skills_response(ctx:it.ComponentContext,blah):
 
     elif skill_id == '0': #combat
         calc_reg[str(ctx.author.user.username)]=[skill_id]
-        loc_menu = MakeMenu3("Select Location !","select_location")
+        loc_menu = make_loc_menu("Select Location !","select_location")
         row = ActionRow(
         components=[loc_menu]
         )
@@ -301,7 +301,7 @@ async def skills_response(ctx:it.ComponentContext,blah):
 
     else:#other skills
         calc_reg[str(ctx.author.user.username)]=[skill_id]
-        rsc_menu = MakeMenu(skill_id,"Select Resource !","select_resource")
+        rsc_menu = make_rsc_menu(skill_id,"Select Resource !","select_resource")
         row = ActionRow(
         components=[rsc_menu]
         )
@@ -313,7 +313,7 @@ async def loc_response(ctx:it.ComponentContext,blah):
     if loc_id == 'Cancel' :
         await ctx.edit("You Chose To End The Interaction", components=[])
     else:
-        mob_menu = MakeMenu4(int(loc_id),"Select Mob !","select_mob")
+        mob_menu = make_mob_menu(int(loc_id),"Select Mob !","select_mob")
         row = ActionRow(
         components=[mob_menu]
         )
@@ -325,7 +325,7 @@ async def mob_response(ctx:it.ComponentContext,blah):
     if mob_id == 'Cancel' :
         await ctx.edit("You Chose To End The Interaction", components=[])
     else:
-        boost_menu = MakeMenu2("0","Select Boost !","select_boost")
+        boost_menu = make_boost_menu("0","Select Boost !","select_boost")
         calc_reg[str(ctx.author.user.username)].append(mob_id)
         row = ActionRow(
         components=[boost_menu]
@@ -341,7 +341,7 @@ async def rsc_response(ctx:it.ComponentContext,blah):
     else:
         skill_id = calc_reg[str(ctx.author.user.username)][0]
         
-        boost_menu = MakeMenu2(skill_id,"Select Boost !","select_boost")
+        boost_menu = make_boost_menu(skill_id,"Select Boost !","select_boost")
         calc_reg[str(ctx.author.user.username)].append(resource_id)
         row = ActionRow(
         components=[boost_menu]
@@ -495,7 +495,7 @@ async def skills_response(ctx:it.ComponentContext,blah):
         await ctx.send("you canceled the interaction. \nhave a great day!", components=[])
     else:
         g_reg[str(ctx.author.user.username)] = skill_id
-        g_boost_menu = MakeMenu2(skill_id,"Select Boost !","g_select_boost")        
+        g_boost_menu = make_boost_menu(skill_id,"Select Boost !","g_select_boost")        
         await ctx.edit("Select Boost To Cast On Your Guide !",components=[g_boost_menu])
         #time.sleep(10)
         #await ctx.edit("Select Boost To Cast On Your Guide !")
