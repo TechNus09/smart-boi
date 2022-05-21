@@ -430,18 +430,18 @@ async def boost_response(ctx:it.ComponentContext,blah):
 
 @bot.command(name="invite" ,description="get bot's invite link" )
 async def invite(ctx:it.CommandContext):
-    await ctx.send("Sorry, currently the bot is in 100 servers and waiting for verification to be able to join more :(.")
-#    e = it.Embed(title="Click The Button To Invite Me", color=0x00ff00)
-#    inv_button_on = Button(
-#                            style=ButtonStyle.LINK, 
-#                            label="Invite Me !", 
-#                            url=invite_url,
-#                            disabled=False
-#                            )
-#
-#    await ctx.send(embeds=[e],components=[inv_button_on])
-#    time.sleep(10)
-#    await ctx.edit("Invite Link Timed'Out",embeds=[],components=[])
+    await ctx.send("bot can be added to organic servers only.")
+    e = it.Embed(title="Click The Button To Invite Me", color=0x00ff00)
+    inv_button_on = Button(
+                            style=ButtonStyle.LINK, 
+                            label="Invite Me !", 
+                            url=invite_url,
+                            disabled=False
+                            )
+
+    await ctx.send(embeds=[e],components=[inv_button_on])
+    time.sleep(10)
+    await ctx.edit("Invite Link Timed'Out",embeds=[],components=[])
 
 @bot.command(name="help" ,description="show list of commands")
 async def help(ctx:it.CommandContext):
@@ -480,11 +480,6 @@ async def servers(ctx:it.CommandContext):
         await ctx.send("You don't have permissions to check this")
 
 
-#@bot.command(name="test" ,description="test command" ,scope=[839662151010353172,869611702042378250])
-#async def test(ctx:it.CommandContext):
-#    emoji = "<:combat_sw:880221520121700362>"
-#    msg = emoji + " : combat emoji"
-#    await ctx.send(msg)
 
 
 @bot.command(name="guide" ,description="make a guide for a specific skill with specific boost" )
