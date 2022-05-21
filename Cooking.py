@@ -1,7 +1,7 @@
 from data import *
-
+#empty comment
 cooking_lvls = [
-                 "Lv.1 --> Lv.10"
+                "Lv.1 --> Lv.10"
                 ,"Lv.10 --> Lv.20"
                 ,"Lv.20 --> Lv.30"
                 ,"Lv.30 --> Lv.40"
