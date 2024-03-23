@@ -1,0 +1,38 @@
+Privacy Policy for Discord Bot
+
+We respect your privacy and are committed to protecting any information you provide while using our Discord bot. This Privacy Policy outlines what information we collect and how we use it.
+
+1. Information We Collect:
+
+User ID: We may collect your Discord user ID to provide personalized services and maintain user accounts.
+Server Information: We may collect information about the Discord servers you are a member of to enhance your experience within those servers.
+Usage Data: We may collect data about how you interact with our bot, such as commands and slash commands used, to improve our services.
+2. How We Use Your Information:
+
+Service Improvement: We use the collected information to analyze usage patterns and improve the functionality and performance of our bot.
+Personalization: We may use your Discord user ID to provide personalized features or services tailored to your preferences.
+Communication: We may use your contact information to respond to inquiries or provide updates about our bot.
+3. Data Sharing:
+
+Third Parties: We do not sell, trade, or otherwise transfer your information to third parties without your consent, except where required by law or to provide our services.
+Discord: Please note that Discord may collect additional information as outlined in their privacy policy. We are not responsible for the privacy practices of Discord or any other third-party services.
+4. Data Security:
+
+Protection: We implement security measures to protect your information from unauthorized access, alteration, disclosure, or destruction.
+Retention: We retain your information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy.
+5. Your Rights:
+
+Access and Correction: You may request access to, or correction of, your personal information held by us.
+Opt-Out: You may opt-out of certain data collection practices, although this may limit your ability to use certain features of our bot.
+6. Children's Privacy:
+
+Age Requirement: Our bot is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13.
+7. Changes to This Policy:
+
+Updates: We may update this Privacy Policy from time to time. Any changes will be posted on this page, and the "Last Updated" date will be revised accordingly.
+8. Contact Us:
+
+Questions: If you have any questions or concerns about our Privacy Policy, please contact us at Discord: @technus09 or email: pegatech9@gmail.com.
+By using our Discord bot, you consent to the terms of this Privacy Policy.
+
+Last Updated: 23/03/2024
