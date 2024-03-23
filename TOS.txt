@@ -1,0 +1,23 @@
+Terms of Service for Discord Bot
+
+Welcome to our Discord bot! We're excited to have you use our service, but we need to lay down some ground rules to ensure everyone has a good experience. By using our bot, you agree to the following terms:
+
+1. Respectful Behavior: Please be respectful to other users and our bot. Do not use the bot to harass, bully, or discriminate against others.
+
+2. Lawful Use: You may only use our bot for lawful purposes. Do not engage in any illegal activities while using our service.
+
+3. Intellectual Property: Our bot and its content are protected by copyright and other intellectual property laws. You may not copy, distribute, or modify our bot without permission.
+
+4. Privacy: We respect your privacy. We will not collect any personal information without your consent. However, please note that Discord may collect certain information as outlined in their privacy policy.
+
+5. No Warranty: We provide our bot as is, without any warranties. We cannot guarantee that our bot will always be available or error-free.
+
+6. Limitation of Liability: We will not be liable for any damages arising out of or in connection with the use of our bot.
+
+7. Changes to Terms: We reserve the right to modify these terms at any time. By continuing to use our bot after changes are made, you agree to the updated terms.
+
+8. Termination: We reserve the right to terminate or suspend your access to our bot at any time, for any reason, without prior notice.
+
+9. Contact Us: If you have any questions or concerns about these terms, please contact us at Discord: @technus09.
+
+By using our bot, you agree to abide by these terms. Thank you for using our service!
